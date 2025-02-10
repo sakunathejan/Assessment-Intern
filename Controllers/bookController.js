@@ -33,3 +33,8 @@ export const deleteBook = (req, res) => {
     books = books.filter(b => b.id !== parseInt(req.params.id));
     res.json({ message: 'Book deleted' });
 };
+
+export const getBookName = (req , res) =>{
+    books = books.find(req.params.name)
+    res.json(req.body.name);
+}
